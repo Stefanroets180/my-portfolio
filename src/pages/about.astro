@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Stefan Roets" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="work space"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						I am an aspiring Junior Software developer with an background in Photography and Designing.
+						and an interest in IT that fueled my desire to become a Full-stack Java Software Developer.
+						By immersing myself into this unknown territory,
+						I strived and completed an intense Java Development bootcamp, specific to programming.
+					</p>
+					<p>
+						<br>A new found passion about technology and innovation emerged and.
+						I have made it my duty to get involved in the software development
+						lifecycle from the system arhitecture, through to specing,
+						design and the development about features.
+					</p>
+					<p>
+						<br>I have worked with multiple technologies limited to
+						Android development, JavaScript, React, Python, SpringBoot for API design,
+						Firebase and Firebase functions.
+					</p>
+					<p>
+						<br>I am team player and a great leader when it comes to working on different applications within a team.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>Code College Certification: Javascript (React, React Native, Next.js, Astro, angular) -
+						Java SE1 and SE2 - SQL Database Administration - Spring Framework - Python
+					</p><br>PCD College Certificate in Basic Plumbing<br/>
+					<p><br>Planet Pixel Bloemfontein (Graphic Design)</p>
+					<p><br>National Photography Bedfordview</p><br/>
+
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>officia unde omnis</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
