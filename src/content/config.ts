@@ -1,15 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 export const collections = {
-	work: defineCollection({
-		type: undefined,
-		schema: z.object({
-			title: z.string(),
-			description: z.string(),
-			publishDate: z.coerce.date(),
-			tags: z.array(z.string()),
-			img: z.string(),
-			img_alt: z.string().optional(),
-		})
-	}),
+  // No collections currently defined
+  // Add new collections here if needed in the future
 };
